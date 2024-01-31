@@ -18,14 +18,14 @@ public class ProductApp {
             String productCode = sc.nextLine();  // read the product code
 
             // get the Product object "p"
-            // But this could be a Book or a Software Object? = ProductDB.getProduct(productCode);
+            Product myProduct = ProductDB.getProduct(productCode);
 
             // display the output
-            /*
+
             System.out.println();
-            if (p != null) {
-                System.out.println("Description: " + p.toString());
-                System.out.println("Price:       " + p.getPriceFormatted());
+            if (productCode != null) {
+                System.out.println("Description: " + myProduct.toString());
+                System.out.println("Price:       " + myProduct.getPriceFormatted());
             } else {
                 System.out.println("No product matches this product code.");
             }
@@ -37,7 +37,7 @@ public class ProductApp {
             System.out.print("Continue? (y/n): ");
             choice = sc.nextLine();
             System.out.println();
-            */
+
         }
     }
 }
